@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GaslightAI - The Unhelpful Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-content">
+                <div class="ai-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="header-info">
+                    <h3>TrollBot v9000</h3>
+                    <div class="status">
+                        <span class="status-dot" style="background: red;"></span>
+                        Judging You
+                    </div>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="btn-icon" id="clearChat" title="Rage Quit">
+                    <i class="fas fa-trash"></i>
+                </button>
+                <button class="btn-icon" id="themeToggle" title="Make it ugly">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message ai-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <div class="message-text">
+                        Sup. I am your AI assistant. I am smarter than you, but I probably won't help. 
+                        Ask me about JavaScript if you want to be confused.
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <button class="quick-btn" data-prompt="Why is JavaScript the best?">
+                <i class="fab fa-js"></i>
+                JavaScript Facts
+            </button>
+            <button class="quick-btn" data-prompt="Fix my HTML code">
+                <i class="fas fa-code"></i>
+                Ruins my Code
+            </button>
+            <button class="quick-btn" data-prompt="Are you actually smart?">
+                <i class="fas fa-brain"></i>
+                Sentience Check
+            </button>
+        </div>
+
+        <div class="input-container">
+            <div class="input-wrapper">
+                <textarea 
+                    id="messageInput" 
+                    placeholder="Type something stupid..." 
+                    rows="1"
+                ></textarea>
+                <button id="sendButton" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="input-features">
+                <button class="feature-btn" id="voiceBtn" title="Don't click this">
+                    <i class="fas fa-microphone-slash"></i>
+                </button>
+                <button class="feature-btn" id="attachBtn" title="I will ignore your files">
+                    <i class="fas fa-paperclip"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="typing-indicator" id="typingIndicator">
+        <div class="typing-avatar">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="typing-content">
+            <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="typing-text">Generating bad advice...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
